@@ -1,15 +1,27 @@
-#Python interest calculator
-#Formula A = P(1+r/n)^nt
-'''
-A = amount
-P = principal
-r = rate of interest
-n = number of times interest is compounded per year
-t = time (in years)
-'''
-principal = int(input("Enter the principal amount: "))
-rate = int(input("Enter the rate of interest%: "))
-n = int(input("Enter the number of times interest is compounded(only years): "))
-t = int(input("Enter the time (in years): "))
-amount = principal*(1+rate/n)**(n*t)
-print (f"The amount is {amount}")
+principle = 0
+rate = 0 
+time = 0 
+
+while True:
+    principle = float(input("Enter a principle amount: "))
+    if principle <0:
+        print("The value of principle cant be zero")
+    else:
+      break
+
+while True:
+    rate = float(input("Enter a Rate: "))
+    if rate <0:
+        print ("The rate cant be zero")
+    else:
+      break
+
+while True:
+    time = int(input("Enter a time in years: "))
+    if time <0:
+        print ("The time cant be Zero")
+    else:
+      break
+
+total = principle * (1 + (rate / 100) * time)
+print (f"The balance after {time} years is: ₹{total :,.2f}")
