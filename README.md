@@ -10,7 +10,7 @@ The program validates user input to ensure all values are greater than zero and 
 The program uses the Simple Interest formula:
 
 [
-A = P(1 + rt)
+A = P(1 + r / 100)^t
 ]
 
 Where:
